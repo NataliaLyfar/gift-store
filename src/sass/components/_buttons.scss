@@ -1,0 +1,68 @@
+.menu__button {
+    @include transition (color);
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 1;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    &.is-open .icon-cross {
+    display: block;
+    }
+    &.is-open .icon-menu {
+    display: none;
+    }
+    & .icon-cross {
+    display: none;
+    }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    @media screen and (min-width:$tablet) {
+    display: none;
+    }
+  }
+  
+  .header__button {
+   @include font (18px, 400, 1.22, 0.06em);
+   @include bodered ($accent-color);
+    @include transition (background-color);
+    @include transition (color);
+      @extend %flex-center-style;
+      text-transform: uppercase;
+      font-family: inherit;
+      cursor: pointer;
+      min-width: 140px;
+      height: 39px;
+      padding: 0;
+      color: $accent-color;
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        color: $main-color;
+        background-color: $accent-color;
+    }
+    }
+    
+    .close-btn {
+      @include transition (color);
+      @include transition (border);
+      @include bodered (rgba($secondary-color, 0.1));
+      @extend %flex-center-style;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+    }
+    .close-btn__icon {
+      fill: currentColor;
+    }

@@ -1,0 +1,8 @@
+.logo {
+    font-family: Nautigal, sans-serif;
+    @include font (18px, 400, 2.16, 0.01em);
+    @include decotation (none);
+    color: $tertiary-color;
+    padding: 39px 0;
+    margin: 0 auto 80px;
+}
