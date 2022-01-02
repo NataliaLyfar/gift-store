@@ -1,0 +1,22 @@
+.social-list {
+    margin-top: 100px;
+    margin-left: auto;
+    @media screen and (min-width: $tablet) {
+     display: none;   
+    }
+}
+.social-item {
+&:not(:last-child) {
+margin-bottom: 30px;
+}
+}
+.social-link {
+@include transition (color);
+@include decotation (none);
+font-family: 'The Nautigal', cursive;
+@include font (26px, 400, 1.22, 0.02em);
+color: currentColor;
+&:hover, &:focus, &:active {
+color: $accent-color;
+}
+}

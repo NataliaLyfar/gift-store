@@ -2,8 +2,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+  border-bottom: 1px solid rgba($tertiary-color, 0.25);
+  background-color: $main-color;
+}
+.header__nav {
     display: flex;
     align-items: center;
-    padding: 0 34px 0 80px;
+ justify-content: space-between;
 }

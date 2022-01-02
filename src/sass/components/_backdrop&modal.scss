@@ -1,0 +1,55 @@
+.backdrop {
+  @include transition (opacity);
+    position: fixed;
+    z-index: 1;
+    background-color: rgba($secondary-color, 0.2);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+   
+    overflow-y: scroll;
+  }
+  .backdrop--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .backdrop--is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  .modal {
+    @include transition (transform);
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 30px);
+    padding: 40px;
+    text-align: center;
+    background-color: $main-color;
+    box-shadow: 0px 1px 3px rgba($tertiary-color, 0.12), 0px 1px 1px rgba($tertiary-color, 0.14),
+      0px 2px 1px rgba($tertiary-color, 0.2);
+    border-radius: 4px;
+    @media screen and (min-width:$tablet) {
+    width: 450px;
+    }
+    @media screen and (min-width:$desktop) {
+    width: 528px;
+    }
+  }
+  .modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .modal__title {
+    @include font (18px, 700, 1.5, 0.03em);
+    color: $secondary-color;
+    margin-bottom: 12px;
+    text-align: center;
+    @media screen and (min-width:$desktop) {
+      @include font (20px, 700, 1.15, 0.03em);
+    }
+  }
+  
+  

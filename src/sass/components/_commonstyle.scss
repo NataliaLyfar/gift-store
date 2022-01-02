@@ -3,8 +3,12 @@ body {
     background-color: $main-color;
     color: $secondary-color;
 
-    &.modal-open {
-      overflow: hidden;
+    // &.modal-open {
+    //   overflow: hidden;
+    // }
+    padding-top: 80px;
+    @media screen and (min-width:$tablet) {
+    padding-top: 114px;
     }
   }
   ul {
@@ -36,4 +40,8 @@ body {
     height: 1px !important;
     width: 1px !important;
     overflow: hidden;
+  }
+  .section-title {
+  @include font (32px, 400, 1.23, 0.02em);
+    margin-bottom: 23px;
   }
