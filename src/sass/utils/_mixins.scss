@@ -7,7 +7,7 @@
     line-height: $line-height;
     letter-spacing: $letter-spacing;
 }
-@mixin decotation ($value) {
+@mixin decoration ($value) {
 text-decoration: $value;
 }
 @mixin animation ($declaration, $duration) {

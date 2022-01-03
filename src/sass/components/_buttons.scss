@@ -49,6 +49,8 @@
     }
     }
     .primary-button--hero {
+      @include transition (background-color);
+    @include transition (color);
       min-width: 200px;
       height: 60px;
       color: $main-color;
@@ -56,10 +58,22 @@
       @media screen and (min-width:$desktop) {
       margin: 0; 
       }
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        background-color: $main-color;
+    }
     }
     .primary-button--hero--light {
+      @include transition (background-color);
+    @include transition (color);
       color: $accent-color;
       background-color: transparent;
+      &:hover,
+      &:focus {
+        color: $main-color;
+        background-color: $accent-color;
+    }
     }
     .close-btn {
       @include transition (color);
@@ -80,4 +94,35 @@
     }
     .close-btn__icon {
       fill: currentColor;
+    }
+    .appeal__button--dark {
+      @include transition (background-color);
+    @include transition (color);
+      @include bodered ($secondary-color);
+      min-width: 200px;
+      height: 48px;
+      color: $main-color;
+      background-color: $secondary-color; 
+      margin: 0 16px 0 0; 
+      @media screen and (max-width:479px) {
+        margin: 0 auto 16px; 
+      }
+    }
+    .appeal__button--light {
+      @include transition (border-color);
+    @include transition (color);
+      @include bodered ($secondary-color);
+      min-width: 200px;
+      height: 48px;
+      color: $secondary-color; 
+      background-color: transparent; 
+      margin: 0; 
+      &:hover,
+      &:focus {
+        color: $secondary-color;
+        border-color: $main-color;
+    }
+      @media screen and (max-width:479px) {
+        margin: 0 auto; 
+      }
     }

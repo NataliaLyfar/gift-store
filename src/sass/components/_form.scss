@@ -82,6 +82,9 @@
   position: absolute;
 }
 .checkbox__label {
+  @media screen and (max-width: 419px) {
+  @include font (10px, 400, 1.17, 0.03em);
+  }
   @include font (11px, 400, 1.17, 0.03em);
   display: inline-flex;
   align-items: center;
@@ -99,7 +102,6 @@
   margin-right: 8px;
   border: 2px solid $secondary-color;
   border-radius: 2px;
-  
 }
 .checkbox__input:checked + .checkbox__icon {
   background-image: url(../images/icon-check.svg);
@@ -110,6 +112,9 @@
   background-position: center;
 }
 .condition-link {
+  @media screen and (max-width: 419px) {
+    @include font (10px, 400, 1.17, 0.03em);
+    }
   @include font (11px, 400, 1.17, 0.03em);
   color: $accent-color;
   text-decoration-skip-ink: none;

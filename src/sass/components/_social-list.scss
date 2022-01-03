@@ -12,9 +12,9 @@ margin-bottom: 30px;
 }
 .social-link {
 @include transition (color);
-@include decotation (none);
+@include decoration (none);
 font-family: 'The Nautigal', cursive;
-@include font (26px, 400, 1.22, 0.02em);
+@include font (26px, 700, 1.22, 0.02em);
 color: currentColor;
 &:hover, &:focus, &:active {
 color: $accent-color;

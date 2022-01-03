@@ -1,14 +1,17 @@
 .logo {
   font-family: 'The Nautigal', cursive;
-    @include font (26px, 400, 1.17, 0.01em);
-    @include decotation (none);
+    @include font (26px, 700, 1.17, 0.01em);
+    @include decoration (none);
     color: currentColor;
     padding: 19px 0;
     &:hover, &:focus, &:active {
       color: $accent-color;
       }
     @media screen and (min-width:$tablet) {
-      @include font (30px, 400, 1.17, 0.01em);
+      @include font (30px, 700, 1.17, 0.01em);
         padding: 39px 0;
       }
+}
+.logo--footer {
+  color: $accent-color;
 }

@@ -1,0 +1,103 @@
+.footer {
+    background-color: $main-shadow-color; 
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 15px 35px;
+      @media screen and (min-width:$mobile) {
+          width: $mobile;
+    padding: 115px 45px 35px;  
+      }
+      @media screen and (min-width:$tablet) {
+          width: $tablet;
+      }
+      @media screen and (min-width:$desktop) {
+          width: $desktop;
+          padding: 115px 220px 35px;
+      } 
+}
+.nav__list--footer {
+@extend %flex-center-style;
+padding-bottom: 45px;
+border-bottom: 1px solid $secondary-color;
+}
+.nav__item--footer {
+&:nth-child(3n+1) {
+@media screen and (max-width:369px) {
+margin-right: 20px;
+}
+margin-right: 35px;
+@media screen and (min-width:$desktop){
+margin-right: 80px;
+}
+}
+&:nth-child(3n) {
+@media screen and (max-width:369px) {
+margin-right: 25px;
+margin-left: 25px;
+}
+margin-left: 50px;
+margin-right: 50px;
+@media screen and (min-width:$desktop){
+margin-left: 140px;
+margin-right: 140px;
+}
+}
+}
+.nav__link--footer {
+    @include transition (color);
+    @include decoration (none);
+    @include font (14px, 500, 1.22, 0.02em);
+    @media screen and (max-width:369px) {
+    @include font (12px, 400, 1.22, 0.02em);
+    }
+    color: currentColor;
+    padding: 15px 0;
+    &:hover, &:focus, &:active {
+    color: $accent-color;
+    }
+}
+.social-media {
+@extend %flex-center-style;
+margin: 55px auto 72px;
+}
+.social-media__item {
+&:not(:last-child) {
+margin-right: 24px;
+}
+}
+.social-media__link {
+    @include transition (color);
+    @include decoration (none);
+    @include transition (fill);
+    @extend %flex-center-style;
+    border-radius: 50%;
+    color: $accent-color;
+    border: none;
+    & .social-media__icon{
+        &:hover, &:focus, &:active {
+    color: $main-color;
+    fill: $accent-color;
+    }
+    }
+}
+
+.privacy__text {
+    @include font (14px, 400, 1.4, 0.02em);
+    margin-right: 14px;
+    @media screen and (max-width:369px) {
+    @include font (12px, 400, 1.22, 0.02em);
+    }
+}
+.privacy__link {
+    @include transition (color);
+    @include decoration (none);
+    @include font (14px, 400, 1.22, 0.02em);
+    @media screen and (max-width:369px) {
+    @include font (12px, 400, 1.22, 0.02em);
+    }
+    color: currentColor;
+    &:hover, &:focus, &:active {
+    color: $accent-color;
+    }
+}
+

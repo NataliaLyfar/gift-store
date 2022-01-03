@@ -1,4 +1,14 @@
 .hero {
+    margin: 0 auto;
+    @media screen and (min-width:$mobile) {
+        width: $mobile;
+    }
+    @media screen and (min-width:$tablet) {
+        width: $tablet;
+    }
+    @media screen and (min-width:$desktop) {
+        width: $desktop;
+    }
     @media screen and (max-width: 1439px) {
         padding: 0 25px;
     }
@@ -7,27 +17,38 @@
         flex-wrap: wrap;
     }
 }
+.hero--top {
+    padding: 72px 15px;
+    @media screen and (min-width: $tablet) {
+        padding: 145px 130px;
+        }
+    @media screen and (min-width: $desktop) {
+    padding: 154px 140px 135px 135px;
+    }
+}
+.hero--bottom {
+    padding: 72px 15px;
+    @media screen and (min-width: $tablet) {
+        padding: 145px 130px;
+        }
+    @media screen and (min-width: $desktop) {
+    padding: 164px 166px 104px 112px;
+    } 
+}
 .hero--text {
 flex-basis: calc(100% / 2);
 height: auto;
-padding: 72px 0;
 background-color: $main-shade-color;
-@media screen and (min-width: $tablet) {
-    padding: 145px 170px;
-    }
-@media screen and (min-width: $desktop) {
-padding: 154px 140px 135px 135px;
-}
 }
 .hero__title {
-    @include font (42px, 400, 1.23, 0.02em);
+    @include font (42px, 700, 1.23, 0.02em);
     margin-bottom: 30px;
     @media screen and (min-width: $tablet) {
-        @include font (56px, 400, 1.23, 0.02em);
+        @include font (56px, 700, 1.23, 0.02em);
         margin-bottom: 36px;   
     }  
 }
-.hero__text {
+.hero__description {
     @include font (18px, 400, 1.4, 0.02em);
     margin-bottom: 30px;
     @media screen and (min-width: $tablet) {
@@ -35,8 +56,12 @@ padding: 154px 140px 135px 135px;
         margin-bottom: 50px;   
     }   
 }
+.hero__description--bottom {
+@media screen and (min-width: $tablet) {
+    margin-bottom: 35px;   
+    }    
+}
 .hero--picture {
-    
     flex-basis: calc(100% / 2);
     height: auto;
 }

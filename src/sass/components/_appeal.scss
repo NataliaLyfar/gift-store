@@ -1,0 +1,35 @@
+.appeal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  background-color: $accent-color; 
+  margin: 0 auto;
+  padding: 81px 0 69px;
+    @media screen and (min-width:$mobile) and (max-width: 1439px) {
+        width: $mobile;
+        flex-direction: column;
+    }
+    @media screen and (min-width:$tablet) {
+        width: $tablet;
+    }
+    @media screen and (min-width:$desktop) {
+        width: $desktop;
+        padding: 81px 235px 69px;
+    } 
+}
+.appeal__meta {
+    @media screen and (max-width: 1439px) {
+    margin: 0 auto 35px;
+    }
+}
+.appeal__text {
+@include font (32px, 400, 1.4, 0.02em);
+}
+.appeal__text--bold {
+font-weight: 700;
+}
+.appeal__buttons {
+    display: flex;
+    flex-wrap: wrap;
+}

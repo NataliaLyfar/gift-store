@@ -16,8 +16,8 @@ display: flex;
 }
 .nav__link {
 @include transition (color);
-@include decotation (none);
-@include font (18px, 400, 1.22, 0.02em);
+@include decoration (none);
+@include font (18px, 500, 1.22, 0.02em);
 color: currentColor;
 padding: 27px 0;
     &:hover, &:focus, &:active {
