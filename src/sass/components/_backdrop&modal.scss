@@ -1,7 +1,7 @@
 .backdrop {
   @include transition (opacity);
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     background-color: rgba($secondary-color, 0.2);
     width: 100vw;
     height: 100vh;
@@ -9,14 +9,15 @@
     left: 0;
    
     overflow-y: scroll;
+    &.is-hidden .modal {
+      transform: scale(1.5);
+      }
   }
-  .backdrop--is-hidden {
+  .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
   }
-  .backdrop--is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
+  
   .modal {
     @include transition (transform);
     transform: translate(-50%, -50%) scale(1);

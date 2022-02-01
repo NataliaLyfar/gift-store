@@ -1,10 +1,11 @@
 .header {
     position: fixed;
+    z-index: 20;
     top: 0;
     left: 0;
     width: 100vw;
-  border-bottom: 1px solid rgba($tertiary-color, 0.25);
-  background-color: $main-color;
+  background-image: linear-gradient(to bottom,  $main-color, transparent);
+ 
 }
 .header__nav {
     display: flex;

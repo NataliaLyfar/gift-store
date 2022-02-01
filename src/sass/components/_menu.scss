@@ -1,22 +1,22 @@
-.menu__container {
+.menu {
     @media screen and (max-width:767px) {
-    @include transition (transform);
-    position: absolute;
+      @include transition (visibility);
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
     background-color: $main-color;
-    transform: translateX(100%);
-    &.is-open {
     display: flex;
     flex-direction: column;
-    transform: translateX(0);
     justify-content: space-between;
-    }
+    
     }
     @media screen and (min-width:$tablet) {
+      position: static;
+      z-index: 2;
     margin-left: 110px;
   width: 100%;
     display: flex;

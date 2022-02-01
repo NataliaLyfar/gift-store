@@ -1,37 +1,41 @@
 <header class="header">
   <div class="header__nav container">
   <a href="./index.html" class="logo">logo</a>
-  <button type="button" class="menu__button" data-mobile-btn aria-expanded="false"
-  aria-controls="mobile-menu"
+  <button type="button" data-mobile-open class="menu__button" 
   >
-    <svg width="40" height="40" aria-label="Переключатель мобильного меню"><use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use><use class="icon-cross" href="./images/symbol-defs.svg#icon-cross"></use>
+    <svg width="40" height="40" aria-label="Переключатель мобильного меню"><use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
     </svg>
   </button>
-  <div class="menu__container" data-menu-container id="mobile-menu"> 
+  <div class="menu"> 
+    <button type="button" data-mobile-close class="menu__button" 
+  >
+    <svg width="40" height="40" aria-label="Переключатель мобильного меню"><use class="icon-cross" href="./images/symbol-defs.svg#icon-cross"></use>
+    </svg>
+  </button>
     <nav>
     <ul class="nav__list">
       <li class="nav__item">
         <a href="./index.html" class="nav__link">Home</a>
       </li>
       <li class="nav__item">
-        <a href=" " class="nav__link">About Us</a>
+        <a href="#about" class="nav__link js-about">About Us</a>
       </li>
       <li class="nav__item">
-        <a href="" class="nav__link">Services</a>
+        <a href="#services" class="nav__link js-service">Services</a>
       </li>
       <li class="nav__item">
-        <a href="" class="nav__link">Blogs</a>
+        <a href="#blogs" class="nav__link js-blogs">Blogs</a>
       </li>
     </ul>
   </nav>
   <div class="connect">
   <button class="primary-button" data-modal-open type="button">Gift Finder</button>
   <ul class="social-list">
-    <li class="social-item"><a href="" class="social-link">Facebook</a></li>
-    <li class="social-item"><a href="" class="social-link">Twitter</a></li>
-    <li class="social-item"><a href="" class="social-link">Instagram</a></li>
-    <li class="social-item"><a href="" class="social-link">YouTube</a></li>
-    <li class="social-item"><a href="" class="social-link">Pinterest</a></li>
+    <li class="social-item"><a target="_blank" rel='noopener' href="https://www.facebook.com/" class="social-link">Facebook</a></li>
+    <li class="social-item"><a target="_blank" rel='noopener' href="https://www.twitter.com/" class="social-link">Twitter</a></li>
+    <li class="social-item"><a target="_blank" rel='noopener' href="https://www.instagram.com/" class="social-link">Instagram</a></li>
+    <li class="social-item"><a target="_blank" rel='noopener' href="https://www.youtube.com/" class="social-link">YouTube</a></li>
+    <li class="social-item"><a target="_blank" rel='noopener' href="https://www.pinterest.com/" class="social-link">Pinterest</a></li>
   </ul>
   </div>
 </div>

@@ -1,32 +1,24 @@
 (() => {
-  const mobileMenu = document.querySelector('[data-menu-container]');
-  const openMenuBtn = document.querySelector('[data-mobile-btn]');
-  const closeMenuBtn = document.querySelector('[data-mobile-btn]');
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
-    openMenuBtn.classList.toggle('is-open');
- 
-  
-   
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+  const refs = {
+    openMenuBtn: document.querySelector("[data-mobile-open]"),
+    
+    openAbout: document.querySelector(".js-about"),
+    openService: document.querySelector(".js-service"),
+    openBlogs: document.querySelector(".js-blogs"),
+    closeMenuBtn: document.querySelector("[data-mobile-close]"),
+    menu: document.querySelector(".menu"),
   };
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  
+  refs.openAbout.addEventListener('click', toggleMenu);
+  refs.openService.addEventListener('click', toggleMenu);
+  refs.openBlogs.addEventListener('click', toggleMenu);
+  
 
-  // Закрываем мобильное меню на более широких экранах
-  // в случае изменения ориентации устройства.
-
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
-  });
+  function toggleMenu() {
+    refs.menu.classList.toggle('is-hidden');
+  }
+  
 })();

@@ -1,21 +1,13 @@
 .menu__button {
     @include transition (color);
-    position: fixed;
+    position: absolute;
     top: 15px;
     right: 15px;
-    z-index: 1;
+    z-index: 2;
     padding: 0;
     border: none;
     background-color: transparent;
-    &.is-open .icon-cross {
-    display: block;
-    }
-    &.is-open .icon-menu {
-    display: none;
-    }
-    & .icon-cross {
-    display: none;
-    }
+    
     &:hover,
     &:focus {
       color: $accent-color;
