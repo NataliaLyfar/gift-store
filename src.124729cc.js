@@ -1,8 +1,8 @@
 parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"clu1":[function(require,module,exports) {
 
-},{"./../images/icon-check.svg":[["icon-check.a762cf20.svg","ePFJ"],"ePFJ"]}],"tu4c":[function(require,module,exports) {
+},{"./../images/icon-check.svg":[["icon-check.a762cf20.svg","ePFJ"],"ePFJ"]}],"sByI":[function(require,module,exports) {
 (()=>{const e=document.querySelector("[data-menu-container]"),t=document.querySelector("[data-mobile-btn]"),o=document.querySelector("[data-mobile-btn]"),d=()=>{const o="true"===t.getAttribute("aria-expanded")||!1;t.setAttribute("aria-expanded",!o),e.classList.toggle("is-open"),t.classList.toggle("is-open"),bodyScrollLock[o?"enableBodyScroll":"disableBodyScroll"](document.body)};t.addEventListener("click",d),o.addEventListener("click",d),window.matchMedia("(min-width: 768px)").addEventListener("change",o=>{o.matches&&(e.classList.remove("is-open"),t.setAttribute("aria-expanded",!1),bodyScrollLock.enableBodyScroll(document.body))})})();
-},{}],"Jxnb":[function(require,module,exports) {
+},{}],"RSqK":[function(require,module,exports) {
 (()=>{const o={openModalBtn:document.querySelector("[data-modal-open]"),closeModalBtn:document.querySelector("[data-modal-close]"),modal:document.querySelector("[data-modal]")};function e(){document.body.classList.toggle("modal-open"),o.modal.classList.toggle("backdrop--is-hidden")}o.openModalBtn.addEventListener("click",e),o.closeModalBtn.addEventListener("click",e)})();
 },{}],"pBGv":[function(require,module,exports) {
 
@@ -20,6 +20,6 @@ var i;!function(e){"use strict";"function"==typeof i&&i.amd?i(["jquery"],e):"und
 },{}],"hmEk":[function(require,module,exports) {
 
 },{"./ajax-loader.gif":[["ajax-loader.dd4d6c6b.gif","ozqH"],"ozqH"],"./fonts/slick.eot":[["slick.89a384e8.eot","d7d4"],"d7d4"],"./fonts/slick.woff":[["slick.e2a2ba3c.woff","RWcb"],"RWcb"],"./fonts/slick.ttf":[["slick.b15f1b73.ttf","ww8E"],"ww8E"],"./fonts/slick.svg":[["slick.cc44e200.svg","vwNk"],"vwNk"]}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss"),require("../js/mobile-menu"),require("../js/modal");var e=s(require("jquery"));function s(e){return e&&e.__esModule?e:{default:e}}require("slick-carousel"),require("slick-carousel/slick/slick.scss"),require("slick-carousel/slick/slick-theme.scss");
-},{"./sass/main.scss":"clu1","../js/mobile-menu":"tu4c","../js/modal":"Jxnb","jquery":"juYr","slick-carousel":"QAGU","slick-carousel/slick/slick.scss":"Tmjc","slick-carousel/slick/slick-theme.scss":"hmEk"}]},{},["Focm"], null)
-//# sourceMappingURL=/gift-store/src.3fb05a8e.js.map
+"use strict";require("./sass/main.scss"),require("./js/mobile-menu"),require("./js/modal");var e=s(require("jquery"));function s(e){return e&&e.__esModule?e:{default:e}}require("slick-carousel"),require("slick-carousel/slick/slick.scss"),require("slick-carousel/slick/slick-theme.scss");
+},{"./sass/main.scss":"clu1","./js/mobile-menu":"sByI","./js/modal":"RSqK","jquery":"juYr","slick-carousel":"QAGU","slick-carousel/slick/slick.scss":"Tmjc","slick-carousel/slick/slick-theme.scss":"hmEk"}]},{},["Focm"], null)
+//# sourceMappingURL=/gift-store/src.124729cc.js.map
